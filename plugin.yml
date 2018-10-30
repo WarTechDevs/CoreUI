@@ -1,0 +1,9 @@
+name: CoreUIByWarTechDevs
+api: [3.0.0, 4.0.0]
+main: CoreUI/Main
+version: 1.0.0
+author: WarTechDevs
+ commands:
+ coreui:
+ usage: "/coreui"
+ description: "Opens The CoreUI Menu"
