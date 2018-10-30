@@ -1,10 +1,6 @@
 <?php
 namespaces: CoreUI;
 use jojoe77777\FormAPI;
+use pocketmine\plugin\PluginBase;
 
-class Main extends PluginBase implements Listener{
-    
-	public function onEnable(): void{
-		$this->getServer()->getPluginManager()->registerEvents(($this), $this);
-		$this->getLogger()->info("Plugin Enabled By WarTechDevs");
-	}
+class CoreUI extends PluginBase implements Listener{
