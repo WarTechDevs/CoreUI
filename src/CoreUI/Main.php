@@ -1,5 +1,5 @@
 <?php
-namespaces: CoreUI;
+namespace: CoreUI;
 use jojoe77777\FormAPI;
 use pocketmine\plugin\PluginBase;
 
