@@ -1,5 +1,5 @@
 name: CoreUI
-main: CoreUI\Main
+main: Core\Main
 api: [3.2.5]
 version: 1.0.0
 author: WarTechDevs
