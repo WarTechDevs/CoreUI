@@ -1,9 +1,9 @@
 <?php
 declare(strict_types = 1);
-namespace CoreUI\Commands;
-use CoreUI\BaseFiles\BaseCommand;
-use CoreUI\BaseFiles\BaseAPI;
-use CoreUI\command\CommandSender;
+namespace Core\Commands;
+use Core\BaseFiles\BaseCommand;
+use Core\BaseFiles\BaseAPI;
+use Core\command\CommandSender;
 use pocketmine\Player;
 use pocketmine\utils\TextFormat;
 class NickNameCommand extends BaseCommand{
