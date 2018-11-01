@@ -6,16 +6,8 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
-class AutpXP extends PluginBase implements Listener{
-	
-	public function onEnable(): void{
-		$this->getServer()->getPluginManager()->registerEvents(($this), $this);
-		$this->getLogger()->info("Plugin Enabled By WarTechDevs");
-	}
-    /**
-     * @param BlockBreakEvent $event
-     * @priority HIGHEST
-     */
+class AutoXP extends PluginBase implements Listener{
+
 	public function onBreak(BlockBreakEvent $event){
 	    if($event->isCancelled()){
 	        return;
