@@ -1,8 +1,8 @@
 <?php
 declare(strict_types = 1);
-namespace CoreUI\Commands;
-use CoreUI\BaseFiles\BaseAPI;
-use CoreUI\BaseFiles\BaseCommand;
+namespace Core\Commands;
+use Core\BaseFiles\BaseAPI;
+use Core\BaseFiles\BaseCommand;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
 use pocketmine\utils\TextFormat;
