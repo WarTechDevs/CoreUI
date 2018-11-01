@@ -1,5 +1,5 @@
 <?php
-namespace CoreUI;
+namespace Core;
 use pocketmine\plugin\PluginBase;
 class Main extends PluginBase implements Listener{
 	
