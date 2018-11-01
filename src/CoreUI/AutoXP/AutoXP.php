@@ -1,6 +1,5 @@
 <?php
-namespace CoreUI;
-use pocketmine\Main;
+namespace Core;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\Listener;
@@ -9,6 +8,10 @@ use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 class AutoXP extends PluginBase implements Listener{
 
+    /**
+     * @param BlockBreakEvent $event
+     * @priority HIGHEST
+     */
 	public function onBreak(BlockBreakEvent $event){
 	    if($event->isCancelled()){
 	        return;
