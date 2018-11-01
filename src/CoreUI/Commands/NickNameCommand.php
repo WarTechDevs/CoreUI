@@ -2,6 +2,7 @@
 declare(strict_types = 1);
 namespace CoreUI\Commands;
 use CoreUI\BaseFiles\BaseCommand;
+use CoreUI\BaseFiles\BaseAPI;
 use CoreUI\command\CommandSender;
 use pocketmine\Player;
 use pocketmine\utils\TextFormat;
@@ -30,11 +31,11 @@ class NickNameCommand extends BaseCommand{
         $nick = ($n = strtolower($alias[0])) === "off" || $n === "remove" || (bool) $n === false ? false : $args[0];
         $player = $sender;
         if(isset($args[1])){
-            if(!$sender->hasPermission("essentials.nick.other")){
-                $sender->sendMessage(TextFormat::RED . $this->getPermissionMessage());
+            if(!$sender->hasPermission("coreui.nick.other")){
+                $sender->sendMessage($this->getPermissionMessage());
                 return false;
             }elseif(!($player = $this->getAPI()->getPlayer($args[1]))){
-                $sender->sendMessage(TextFormat::RED . "[Error] Player not found");
+                $sender->sendMessage("player not found");
                 return false;
             }
         }
@@ -42,12 +43,12 @@ class NickNameCommand extends BaseCommand{
             $this->getAPI()->removeNick($player);
         }else{
             if(!$this->getAPI()->setNick($player, $nick)){
-                $sender->sendMessage(TextFormat::RED . "[Error] You don't have permissions to give 'colored' nicknames");
+                $sender->sendMessage("you have no permision to set nicknames using color");
             }
         }
-        $player->sendMessage(TextFormat::GREEN . "Your nick " . ($m = !$nick ? "has been removed" : "is now " . TextFormat::RESET . $nick));
+        $player->sendMessage("your nick " . ($m = !$nick ? "has been removed" : "is now " . $nick));
         if($player !== $sender){
-            $sender->sendMessage(TextFormat::GREEN . $player->getName() . (substr($player->getName(), -1, 1) === "s" ? "'" : "'s") . " nick " . $m);
+            $sender->sendMessage($player->getName() . (substr($player->getName(), -1, 1) === "s" ? "'" : "'s") . " nick " . $m);
         }
         return true;
     }
