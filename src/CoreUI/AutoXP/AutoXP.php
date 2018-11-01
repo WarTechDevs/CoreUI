@@ -1,5 +1,6 @@
 <?php
 namespace CoreUI;
+use pocketmine\Main;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\Listener;
